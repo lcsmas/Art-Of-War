@@ -1,6 +1,6 @@
 #coding:utf-8
 # === === Arriere === === #
-import carte
+
 def creerArriere() :
     # Pre-condition : Aucune
     # Post-condition : Aucune
@@ -11,7 +11,6 @@ def envoyerArriere(arriere,carte,pos) :
     # Pre-condition : arriere est de type Arriere, carte est de type Carte. pos est un string dont le premier caractère est un A et le deuxieme est un chiffre
     # Post-condition : Aucune 
     # Resultat : La carte donnée en parametre est positionné dans l'arriere, à la position pos. La fonction modifie donc l'arriere et le renvoie
-    carte.setPositionCarte(carte,pos)
     return arriere[pos] = carte
 
 def nbCarteArriere(arriere) : 
@@ -32,6 +31,5 @@ def extraireArriere(arriere,pos) :
     # Post-condition : Aucune 
     # Resultat : renvoie la carte située à la position pos, et modifie l'arriere en retirant la carte. 
     res = arriere[pos]
-    setPositionCarte(arriere[pos],"Vide")
     arriere[pos] = "Vide"
     return res 

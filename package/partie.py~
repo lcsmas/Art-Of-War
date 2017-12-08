@@ -5,7 +5,7 @@ def creerPartie(joueur1,joueur2) :
     # Pre-condition : joueur1 et joueur2 sont de type Joueur
     # Post-condition : Aucune
     # Resultat : Retourne une partie dans laquelle : le premier joueur donné en paramètre est le joueurCourant et le deuxieme est son joueur adverse
-    return { "joueurCourant" : joueur1, "" : joueur2 }
+    
     pass
     
 def joueurCourant(partie) : 
