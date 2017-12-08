@@ -5,15 +5,22 @@ def creerPioche(indice) :
     # Pre-condition : Int donné en parametre (indice) est un entier egal à 1 ou 2.
     # Post-condition : Aucune
     # Resultat : Créer un élément de Type Pioche dans laquelle il y aura : 9 cartes avec le Role = "Archer", 6 cartes avec Role = "Garde" et 5 cartes dont le Role = "Soldat". La fonction renvoie la pioche créée 
+    pioche = []
+
+    for i in range(8):
+        pioche.append(creerCarte("Archer"))
+    for i in range(5):
+        pioche.append(creerCarte("Garde"))
+    for i in range(4):
+        pioche.append(creerCarte("Soldat"))
+
     
-    pass
 
 def piocher(pioche) : 
     # Pre-condition : pioche est de type Pioche
     # Post-condition : Aucune
     # Resultat : Renvoie une carte aléatoire dans la pioche donnée en parametre. La pioche est alors modifiée, la carte piochant etant retirée de la pioche.
     
-    pass
     
 def ajouterPioche(pioche,carte) :
     # Pre-condition : Aucune
