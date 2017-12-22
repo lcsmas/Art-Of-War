@@ -6,7 +6,7 @@ def creerMain(indice) :
     # Post-condition : Aucune
     # Resultat : Créer un element de type Main contenant une carte Roi correspondant à l'indice donné
     
-    pass
+    
 
 def descriptionMain(main) : 
     # Pre-condition : main est de Type Main

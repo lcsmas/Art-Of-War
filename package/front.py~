@@ -1,6 +1,6 @@
 #coding:utf-8
 # === === Front === === #
-import carte 
+    
 def creerFront() :
     # Pre-condition : Aucune
     # Post-condition : Aucune 
@@ -11,7 +11,6 @@ def envoyerFront(front,carte,pos):
     # Pre-condition : front est de type Front, carte de type Carte et pos de type str
     # Post-condition : Aucune 
     # Resultat : La carte est envoyé au front à la position indiquée en paramètre. Le front est modifié et renvoyé !
-    carte.setPositionCarte(carte,pos)
     return front[pos] = carte
 
 def nbCarteFront(front) : 
@@ -32,6 +31,5 @@ def extraireFront(front, pos) :
     # Post-condition : Aucune
     # Resultat : Renvoie la carte située à la position "pos" du front donné en parametre. Le front est modifié (car la carte est retiré du front) et la carte retirée est renvoyée. 
     res = front[pos]
-    setPositionCarte(front[pos],"Vide")
     front[pos] = "Vide"
     return res
