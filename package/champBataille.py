@@ -5,8 +5,8 @@ def creerChampBataille():
     # Pre-condition : Le joueur entré en paramètre ne doit pas avoir de champ de bataille existant
     # Post-condition : Aucune
     # Resultat : Crée un champ de bataille vide. Crée un front et un arriere, les associent au champ créé et renvoie le champ.
+    return [creerFront,creerArriere]
     
-    pass
     
 def redresseCartes(champ):
     # Pre-condition : le champ est de type ChampBataille

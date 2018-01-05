@@ -107,10 +107,10 @@ def estAPortee(carte,cible) :
     # Pre-condition : carte et cible sont toutes deux des Carte présentent sur le champ de bataille
     # Post-condition : 
     # Resultat : Renvoie True si la cible est à portée de la carte, False sinon
-    pos_attaquant = carte['positionCarte']
-    role_attaquant = carte ['role']
-    pos_defenseur = cible['positionCarte'] 
-    role_defenseur = cible['role']
+    pos_attaquant = positionCarte(carte)
+    role_attaquant = roleCarte(carte)
+    pos_defenseur = positionCarte(cible) 
+    role_defenseur = roleCarte(cible)
 
     if role_attaquant == "Roi1" :
         if pos_attaquant in ['F1','F2','F3'] :
@@ -124,7 +124,48 @@ def estAPortee(carte,cible) :
                 return True
             else :
                 return False
-        if pos
-    pass
+        else :
+                return False
+
+    if role_attaquant == "Roi2" :
+        if pos_attaquant in ['F1','F2','F3'] :
+            if pos_defenseur in ['F1','F2','F3']:
+                return True   
+            else :
+            	return False
+        else :
+        	return False
+    if role_attanquant == "Archer":
+    		if pos_attaquant in ['F1','F2','F3'] :
+	    	    if pos_attaquant=='F1' and (pos_defenseur =='A2' or pos_defenseur == 'F3'):
+	                return True
+	            elif pos_attaquant=='F2' and (pos_defenseur =='A1' or pos_defenseur == 'A3'):
+	                return True
+	            elif pos_attaquant=='F3' and (pos_defenseur=='A1' or pos_defenseur == 'F1'):
+	                return True
+	            else :
+	                return False
+	        if pos_attaquant in ['A1','A2','A3'] :
+	        	if pos_attaquant=='A1' and pos_defenseur =='F2':
+                return True
+	            elif pos_attaquant=='A2' and (pos_defenseur =='F1'or pos_defenseur == 'F3'):
+	                return True
+	            elif pos_attaquant=='A3' and pos_defenseur=='F2':
+	                return True
+	            else :
+	                return False
+
+    
+    if role_attaquant == "Soldat" or role_attaquant == "Garde" :
+    		if pos_attaquant=='F1' and pos_defenseur =='F1':
+                return True
+            elif pos_attaquant=='F2' and pos_defenseur =='F2':
+                return True
+            elif pos_attaquant=='F3' and pos_defenseur=='F3':
+                return True
+            else :
+                return False
+
+    
     
     

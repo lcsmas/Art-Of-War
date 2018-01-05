@@ -1,6 +1,8 @@
 #coding:utf-8
 # === === Pioche === === #
 
+import random
+
 def creerPioche(indice) :
     # Pre-condition : Int donné en parametre (indice) est un entier egal à 1 ou 2.
     # Post-condition : Aucune
@@ -13,6 +15,7 @@ def creerPioche(indice) :
         pioche.append(creerCarte("Garde"))
     for i in range(4):
         pioche.append(creerCarte("Soldat"))
+    return pioche
 
     
 
@@ -20,18 +23,20 @@ def piocher(pioche) :
     # Pre-condition : pioche est de type Pioche
     # Post-condition : Aucune
     # Resultat : Renvoie une carte aléatoire dans la pioche donnée en parametre. La pioche est alors modifiée, la carte piochant etant retirée de la pioche.
-    
+    carte = choice(pioche) #prend une carte au hasard
+    pioche.remove(carte)
+    return carte
     
 def ajouterPioche(pioche,carte) :
     # Pre-condition : Aucune
     # Post-condition : Aucune
     # Resultat : ajoute la carte donnée en paramètre dans la pioche donnée en parametre. Modife et renvoie la pioche modifiée
+    pioche.append(carte)
+    return pioche
     
-    pass
 
 def nbCartePioche(pioche) : 
     # Pre-condition : pioche est de type Pioche
     # Post-condition : Aucune
     # Resultat : Renvoie le nombre de carte restant dans la pioche entrée en paramètre
-    
-    return 0
+    return len(pioche)

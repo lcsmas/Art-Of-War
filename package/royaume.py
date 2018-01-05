@@ -61,8 +61,8 @@ def descriptionRoyaume(royaume) :
     # Resultat : renvoie un string qui est une description du royaume donné en parametre. La chaine de caratere contiendra les Roles des cartes ainsi que le nombre des cartes. Finalement elle comprend le total. Par exemple la chaine de caractere pourra renvoyer "Roi : 0, Soldat : 2, Archer : 3, Garde : 1, Total : 6"
     description= []
     for i in royaume.keys():
-        if i!= "Effondre"
-            description = description + [str(i)":"nbCarteRoleRoyaume(royaume,i)]
+        if i!= "Effondre":
+            description = description + ["{0}:{1}".format(i,nbCarteRoleRoyaume(royaume,i))]
     return ",".join(description)
 
     

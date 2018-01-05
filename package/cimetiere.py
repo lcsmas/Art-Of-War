@@ -5,12 +5,12 @@ def creerCimetiere() :
     # Pre-condition : Aucune 
     # Post-condition : Aucune
     # Resultat : Créer un element de Type Cimetière
-    
-    pass
+    return []
 
 def entrerCimetiere(cimetiere,carte) :
     # Pre-condition : Le cimetière doit etre celui du joueur qui possède la carte, pas de celui qui attaque
     # Post-condition : Aucune
     # Resultat : La carte est ajoutée au Cimetière. Le cimetiere est donc modifié et renvoyé 
+    cimetiere.append(carte)
+    return cimetiere
     
-    pass

@@ -12,7 +12,7 @@ def envoyerArriere(arriere,carte,pos) :
     # Post-condition : Aucune 
     # Resultat : La carte donnée en parametre est positionné dans l'arriere, à la position pos. La fonction modifie donc l'arriere et le renvoie
     carte.setPositionCarte(carte,pos)
-    return arriere[pos] = carte
+    return arriere[pos] == carte
 
 def nbCarteArriere(arriere) : 
     # Pre-condition : arriere est de type Arriere

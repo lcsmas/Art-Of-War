@@ -67,7 +67,20 @@ def cimetiere(joueur) :
 
 def reinitDegat(joueur) : 
     #Pre-condition : le joueur est de Type Joueur
-    #Post-condition : les unités posées sur le champ de bataille (front et arriere), les unités en réserve et les unités dans le royaume ont leur point de degat subis remis à 0
+    #Post-condition : les unités posées sur le champ de bataille (front et arriere), les unités en réserve et 
+    #les unités dans le royaume ont leur point de degat subis remis à 0
     #Resultat : Ne renvoie rien mais modifie les unites du cdb de la reserve et du royaume
-    
-    pass
+    royaume = royaume(joueur)
+    for role in royaume.keys():
+    	#parcourera tout les rôles du royaume, arrêt : quand il a tout parcouru
+    	for carte in role:
+    		#parcourera toute la liste de carte du role
+    		setPointDegat(carte,0)
+    reserve = reserve(joueur)
+    for carte in reserve :
+    	setPointDegat(carte,0)
+    champDeBataille = champBataille(joueur)
+    for ligne in champDeBataille :
+    	for position in ligne.keys() :
+    		setPointDegat(carte,0)
+    return 0
