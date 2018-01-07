@@ -35,6 +35,10 @@ def positionCarte(carte) :
     # Resultat : Retourne la chaine de caractère représentant la position de la carte sur le plateau ("F1","F2",...,"A3")  
     return carte["positionCarte"]
     
+def setModeVerticaleCarte(carte) :
+    carte["estVerticale"] = True
+    return carte
+
 def setPositionCarte(carte,pos) : 
     # Pre-condition : La carte est type Carte, la pos est une string 
     # Post-condition : Aucune

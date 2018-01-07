@@ -345,6 +345,7 @@ while(not(finDePartieEff) and not(finDePartieRoi) and not(finDePartiePioche)) :
                         else : 
                             # La carte va au cimetière (RIP)
                             entrerCimetiere(cimetiere(JA), Carte)
+                            retirerCarte(champBataille(JoueurAdverse),positionCible)
                             ciblePresente = False #La cible quiite le combat  
                             # Si une unité se trouve derrière elle, elle prend sa place
                             if verifArriere(champBataille(JoueurAdverse),positionCible) :

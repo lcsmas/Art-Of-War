@@ -14,6 +14,18 @@ def envoyerFront(front,carte,pos):
     carte.setPositionCarte(carte,pos)
     return front[pos] = carte
 
+def getCartes(front) :
+    # Renvoie les cartes contenues dans le front
+    return [front["F1"],front["F2"],front["F3"]];
+
+def emplacementVide(front,pos) :
+    #Indique si un emplacement est vide
+    return front[pos] == "Vide"
+
+def estVide(front) :
+    #Indique si le front est vide
+    return front["F1"] == "Vide" and front["F2"]== "Vide" and front["F3"]=="Vide"
+
 def nbCarteFront(front) : 
     # Pre-condition : front est de type Front
     # Post-condition : Aucune 
@@ -32,6 +44,6 @@ def extraireFront(front, pos) :
     # Post-condition : Aucune
     # Resultat : Renvoie la carte située à la position "pos" du front donné en parametre. Le front est modifié (car la carte est retiré du front) et la carte retirée est renvoyée. 
     res = front[pos]
-    setPositionCarte(front[pos],"Vide")
+    carte.setPositionCarte(front[pos],"Vide")
     front[pos] = "Vide"
     return res

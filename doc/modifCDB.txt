@@ -1,0 +1,31 @@
+Ajout import front 
+Ajout import arriere
+Ajout import carte 
+
+creerChampBataille() :
+On demande un joueur en paramètre pour creerChampBataille() dans les pre-conditions mais il n'y a pas de paramètre dans la signature de la fonction.
+On l'a donc ajouté.
+Après réflexion : quand on crée un joueur on lui crée un champ de bataille,
+pourquoi voudrait on vérifier que le joueur donné en paramètre possède un champ de
+bataille ? La pré-condition est étrange et nous empêche de créer un champ de
+bataille car si un joueur existe alors il a forcemment un champ de bataille, on décide finalement d'ignorer cette pré-condition
+
+redresseCarte(champ) :
+Il n'existe aucune fonction permettant de remettre une carte verticale.
+On décide d'ajouter une fonction setModeVerticaleCarte(carte) dans carte.py,
+de plus on rajoute import carte pour utiliser les fonctions de carte.
+De plus, si l'on veut modifier le mode des cartes du champ de bataille il faut modifier le mode des cartes du front et de l'arriere, cependant il n'existe aucune fonction dans arriere ou front nous le permettant, pour résoudre ce problème je suggère d'ajouter une fonction getCartes() dans front.py et arriere.py pour récupérer les cartes du champ de bataille et ensuite les redresser grace à carte.setModeVerticaleCarte()
+
+estVide(champ):
+Il n'existe aucune fonction que ce soit dans front ou arriere permettant de savoir si le front ou l'arriere est vide, or pour savoir si le champ est vide nous avons besoin de savoir si le front et l'arriere sont tout les deux vides, pour résoudre le problème je suggère d'ajouter une fonction estVide() dans front et arriere.
+
+
+obtenirCarte():
+Dans les préconditions il est demander de vérifier que l'emplacement demandé n'est pas vide, il n'existe aucune fonction dans arriere et front permettant de le faire, on ajoute donc la fonction emplacementVide() dans arriere et front.
+
+
+estVidePosition():
+Le nom de la fonction n'est pas pertinent puisque selon la spécification elle renvoi false si la position est vide
+
+
+Dans le main L347 lorsqu'on fait entrer une carte dans le cimetière et qu'il n'y a pas de carte derrière elle alors cette carte reste dans le champ de bataille car la spécification de cimetiere.entrerCimetiere() ne précise pas que la carte doit être retirée du champ de bataille, pour résoudre ce problème, j'ajoute une fonction champBataille.retirerCarte() que j'utilise L348 du main.

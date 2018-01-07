@@ -7,6 +7,18 @@ def creerArriere() :
     # Resultat : Créer un element de Type Arriere
     return {"A1" : "Vide", "A2" : "Vide", "A3" : "Vide"}
 
+def emplacementVide(arriere,pos) :
+    #Indique si un emplacement est vide
+    return arriere[pos] == "Vide"
+
+def estVide(arriere) :
+    #Indique si l'arriere est vide
+    return arriere["A1"] == "Vide" and arriere["A2"]== "Vide" and arriere["A3"]=="Vide"
+
+def getCartes(arriere) :
+    # Renvoie les cartes contenues dans l'arriere
+    return [arriere["A1"],arriere["A2"],arriere["A3"]];
+
 def envoyerArriere(arriere,carte,pos) :
     # Pre-condition : arriere est de type Arriere, carte est de type Carte. pos est un string dont le premier caractère est un A et le deuxieme est un chiffre
     # Post-condition : Aucune 
