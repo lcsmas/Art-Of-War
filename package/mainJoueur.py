@@ -1,5 +1,7 @@
 #coding:utf-8
 # === === Main === === #
+
+
     
 def creerMain(indice) : 
     # Pre-condition : Indice est de type Int et compris entre 1 et 2
@@ -26,7 +28,7 @@ def extraireCarteMain(main,i) :
     # Post-condition : Aucune
     # Resultat : Renvoie la i-eme carte de la main. La main est modifiée : On enleve la carte de la main. (I-eme carte dans l'ordre utilisé pour la descritpionMain. en récupérant l'exemple précedent : en utilisant extraireCarteMain(main,2) on obtient la carte de role "Garde"). 
     carte=main[i]
-    del main(i)
+    del main[i]
     return carte
 
 def ajouterCarteMain(main, carte) :

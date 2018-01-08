@@ -14,7 +14,7 @@ def extraireRoyaume(royaume,role) :
     #Vérif pas si ya vraiment une carte du role demandé
 
     carte=royaume[role][0]
-    del royaume[0]
+    del royaume[role][0]
     return carte
 
 
@@ -31,7 +31,7 @@ def nbCarteRoyaume(royaume) :
     # Resultat : Retourne le nombre de citoyens (cartes) dans le royaume placé en paramètre
     nb= 0
     for i in royaume.keys():
-        if i!= "Effondre"
+        if i!= "Effondre" :
             nb = nb + nbCarteRoleRoyaume(royaume,i)
     return nb
     

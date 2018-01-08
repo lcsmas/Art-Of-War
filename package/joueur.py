@@ -1,19 +1,35 @@
 #coding:utf-8
 # === === Joueur === === #
+
+
+from package.arriere import *
+from package.carte import *
+from package.champBataille import *
+from package.cimetiere import *
+from package.front import *
+
+from package.mainJoueur import *
+from package.partie import *
+from package.pioche import *
+from package.reserve import *
+from package.royaume import *
     
+
+
+
 def creerJoueur(indice,nom) : 
     #Pre-condition : indice est un int = 0 ou 1 
     #                nom est un str 
     #Post-condition :Aucune
     #resultat : Crée un element de Type Joueur ayant le nom entré en parametre. Il crée aussi un Royaume vide, un champ de bataille vide, une réserve vide, un cimetiere vide, une main (contenant le Roi). Il crée aussi une pioche. Tous ses elements seront assignés aux joueurs. La fonction renverra le Joueur créé
     Joueur = {}
-    Joueur["Nom"]=nom
-    Joueur["ChampBataille"]=creerChampbataille()
+    Joueur["Nom"]= nom
+    Joueur["ChampBataille"] = creerChampBataille()
     Joueur["Cimetiere"]=creerCimetiere()
-    Joueur["Reserve"]=creerreserve()
+    Joueur["Reserve"]=creerReserve()
     Joueur["Royaume"]=creerRoyaume()
-    Joueur["Main"]=creerMain()
-    Joueur["Pioche"]=creerpioche()
+    Joueur["Main"]=creerMain(indice)
+    Joueur["Pioche"]=creerPioche()
     return Joueur
 
 def nom(joueur):

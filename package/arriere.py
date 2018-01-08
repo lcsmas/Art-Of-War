@@ -1,6 +1,16 @@
 #coding:utf-8
 # === === Arriere === === #
-import carte
+
+from package.carte import *
+from package.champBataille import *
+from package.cimetiere import *
+from package.front import *
+from package.joueur import *
+from package.mainJoueur import *
+from package.partie import *
+from package.pioche import *
+from package.reserve import *
+from package.royaume import *
 def creerArriere() :
     # Pre-condition : Aucune
     # Post-condition : Aucune

@@ -1,14 +1,18 @@
 #coding:utf-8
 # === === Champs Bataille === === #
-import front
-import arriere
-import carte
+import arriere *
+import carte *
+import front *
+
+
+
+
+
 def creerChampBataille():
     # Pre-condition : Le joueur entré en paramètre ne doit pas avoir de champ de bataille existant
     # Post-condition : Aucune
     # Resultat : Crée un champ de bataille vide. Crée un front et un arriere, les associent au champ créé et renvoie le champ.
     return {"front" : front.creerFront(),"arriere" : arriere.creerArriere()}
-    
     
 def redresseCartes(champ):
     # Pre-condition : le champ est de type ChampBataille
@@ -93,7 +97,7 @@ def verifArriere(champ,pos):
     # Resultat : Retourne True si l'Arriere situé derrière la carte cible est occupé, retourne False sinon (ou si la carte cible donnée en paramètre n'est pas au front).
     if pos[0] == "A":
         return False
-    return not(arriere.emplacementVide(arriere(champ),"A" + num)
+    return not(arriere.emplacementVide(arriere(champ),"A" + num))
 
 def retirerCarte(champ, pos):
     #Retire la carte placé sur pos du champ
@@ -109,7 +113,7 @@ def avancerCarte(champ,pos):
     # Resultat : Modifie le champ de bataille dans lequel la carte (située à l'arriere) est envoyée au front. La fonction retourne aussi ce champ.
     if pos[0] == "A":
         raise ValueError('La position doit être un front et pas un arriere')
-    if arriere(champ)["A" + pos[1]] == :
+    if arriere(champ)["A" + pos[1]] :
         raise ValueError('Aucune carte ne se situe derrière' + pos)
     front(champ)["F" + pos[1]] = arriere(champ)["A" + pos[1]]
     return champ

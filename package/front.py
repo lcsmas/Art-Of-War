@@ -1,6 +1,18 @@
 #coding:utf-8
 # === === Front === === #
-import carte 
+
+from package.arriere import *
+from package.carte import *
+from package.champBataille import *
+from package.cimetiere import *
+
+from package.joueur import *
+from package.mainJoueur import *
+from package.partie import *
+from package.pioche import *
+from package.reserve import *
+from package.royaume import *
+
 def creerFront() :
     # Pre-condition : Aucune
     # Post-condition : Aucune 
@@ -12,7 +24,7 @@ def envoyerFront(front,carte,pos):
     # Post-condition : Aucune 
     # Resultat : La carte est envoyé au front à la position indiquée en paramètre. Le front est modifié et renvoyé !
     carte.setPositionCarte(carte,pos)
-    return front[pos] = carte
+    return front[pos] == carte
 
 def getCartes(front) :
     # Renvoie les cartes contenues dans le front

@@ -1,7 +1,17 @@
 #coding:utf-8
 # === === Pioche === === #
 
-import random
+from package.arriere import *
+from package.carte import *
+from package.champBataille import *
+from package.cimetiere import *
+from package.front import *
+from package.joueur import *
+from package.mainJoueur import *
+from package.partie import *
+
+from package.reserve import *
+from package.royaume import *
 
 def creerPioche(indice) :
     # Pre-condition : Int donné en parametre (indice) est un entier egal à 1 ou 2.

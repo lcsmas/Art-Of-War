@@ -1,5 +1,17 @@
 #coding:utf-8
 # === === Partie === === #
+
+from package.arriere import *
+from package.carte import *
+from package.champBataille import *
+from package.cimetiere import *
+from package.front import *
+from package.joueur import *
+from package.mainJoueur import *
+
+from package.pioche import *
+from package.reserve import *
+from package.royaume import *
     
 def creerPartie(joueur1,joueur2) : 
     # Pre-condition : joueur1 et joueur2 sont de type Joueur

@@ -140,28 +140,28 @@ def estAPortee(carte,cible) :
         else :
         	return False
     if role_attanquant == "Archer":
-    		if pos_attaquant in ['F1','F2','F3'] :
-	    	    if pos_attaquant=='F1' and (pos_defenseur =='A2' or pos_defenseur == 'F3'):
-	                return True
-	            elif pos_attaquant=='F2' and (pos_defenseur =='A1' or pos_defenseur == 'A3'):
-	                return True
-	            elif pos_attaquant=='F3' and (pos_defenseur=='A1' or pos_defenseur == 'F1'):
-	                return True
-	            else :
-	                return False
-	        if pos_attaquant in ['A1','A2','A3'] :
-	        	if pos_attaquant=='A1' and pos_defenseur =='F2':
-                return True
-	            elif pos_attaquant=='A2' and (pos_defenseur =='F1'or pos_defenseur == 'F3'):
-	                return True
-	            elif pos_attaquant=='A3' and pos_defenseur=='F2':
-	                return True
-	            else :
-	                return False
+            if pos_attaquant in ['F1','F2','F3'] :
+                if pos_attaquant=='F1' and (pos_defenseur =='A2' or pos_defenseur == 'F3'):
+                    return True
+                elif pos_attaquant=='F2' and (pos_defenseur =='A1' or pos_defenseur == 'A3'):
+                    return True
+                elif pos_attaquant=='F3' and (pos_defenseur=='A1' or pos_defenseur == 'F1'):
+                    return True
+                else :
+                    return False
+            if pos_attaquant in ['A1','A2','A3'] :
+                if (pos_attaquant=='A1' and pos_defenseur =='F2'):
+                    return True
+                elif pos_attaquant=='A2' and (pos_defenseur =='F1'or pos_defenseur == 'F3'):
+                    return True
+                elif pos_attaquant=='A3' and pos_defenseur=='F2':
+                    return True
+                else :
+                    return False
 
     
     if role_attaquant == "Soldat" or role_attaquant == "Garde" :
-    		if pos_attaquant=='F1' and pos_defenseur =='F1':
+            if pos_attaquant=='F1' and pos_defenseur =='F1':
                 return True
             elif pos_attaquant=='F2' and pos_defenseur =='F2':
                 return True
